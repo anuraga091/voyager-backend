@@ -15,6 +15,7 @@ const transactionSchema = new mongoose.Schema({
     account_deployment_data: [String],
     nonce_data_availability_mode: String,
     fee_data_availability_mode: String,
+    status: String,
     max_fee: String,
     fetchedAt: {
         type: Date,
