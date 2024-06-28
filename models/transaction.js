@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const transactionSchema = new mongoose.Schema({
     block_number: { type: Number, index: true },
-    transaction_hash: String,
+    transaction_hash: { type: String, unique: true },
     type: String,
     version: String,
     nonce: String,

@@ -46,9 +46,9 @@ const fetchTransactionsForLastTenBlocks = async () => {
 
 
 //Scheduled task to fetch transactions every 30 seconds
-cron.schedule('*/30 * * * * *', async () => {
-    await fetchTransactionsForLastTenBlocks();
-});
+// cron.schedule('*/30 * * * * *', async () => {
+//     await fetchTransactionsForLastTenBlocks();
+// });
 
 
 
