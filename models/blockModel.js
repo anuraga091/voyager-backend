@@ -15,7 +15,11 @@ const blockSchema = new mongoose.Schema({
     fetchedAt: {
         type: Date,
         default: Date.now
-    }
+    },
+    ethereum: {
+        type: Map,
+        of: Number
+    },
 });
 
 const Block = mongoose.model('Block', blockSchema);

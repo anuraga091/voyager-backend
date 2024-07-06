@@ -2,11 +2,10 @@ const express = require('express');
 const router = express.Router();
 const transactionService = require('../services/transactionService');
 
-// Route to trigger fetching transactions manually
-router.get('/transactions', async (req, res) => {
-    console.log('query:', req.query)
+router.get('/', async (req, res) => {
     try {
-        const transactions = await transactionService.getTransactions(req.query);
+        const { page, limit, type } = req.query;
+        const transactions = await transactionService.getTransactions({ page, limit, type });
         res.status(200).json(transactions);
     } catch (err) {
         console.error(err);
