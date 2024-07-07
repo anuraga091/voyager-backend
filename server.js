@@ -4,7 +4,7 @@ const cors = require('cors');
 const connectDB = require('./config/db');
 const transactionRoutes = require('./routes/transactions');
 const transactionReceiptRoutes = require('./routes/transactionReceipt')
-const cronJob = require('./services/cronjob'); 
+//const cronJob = require('./services/cronjob'); 
 
 const app = express();
 app.use(cors());
